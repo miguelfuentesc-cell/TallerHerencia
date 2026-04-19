@@ -7,8 +7,7 @@ public class MainPunto2 {
     public static void main(String[] args) {
 
         SistemaVentas sistema = new SistemaVentas();
+        sistema.iniciar();
 
-        sistema.registrarVentasDemo();
-        sistema.mostrarResultados();
     }
 }

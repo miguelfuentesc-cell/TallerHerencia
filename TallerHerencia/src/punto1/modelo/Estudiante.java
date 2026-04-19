@@ -1,14 +1,21 @@
 package punto1.modelo;
 
-public class Estudiante extends Persona {
-    private double nota;
+import java.util.ArrayList;
 
-    public Estudiante(String nombre, double nota) {
-        super(nombre);
-        this.nota = nota;
+public class Estudiante extends Persona {
+
+    private ArrayList<Asignatura> asignaturas;
+
+    public Estudiante(String nombre, String identificacion) {
+        super(nombre, identificacion);
+        this.asignaturas = new ArrayList<>();
     }
 
-    public double getNota() {
-        return nota;
+    public void agregarAsignatura(Asignatura asignatura) {
+        asignaturas.add(asignatura);
+    }
+
+    public ArrayList<Asignatura> getAsignaturas() {
+        return asignaturas;
     }
 }

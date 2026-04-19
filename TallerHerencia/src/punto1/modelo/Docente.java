@@ -2,11 +2,14 @@ package punto1.modelo;
 
 public class Docente extends Persona {
 
-    public Docente(String nombre) {
-        super(nombre);
+    private String especialidad;
+
+    public Docente(String nombre, String identificacion, String especialidad) {
+        super(nombre, identificacion);
+        this.especialidad = especialidad;
     }
 
-    public void enseñar() {
-        System.out.println("El docente " + nombre + " está enseñando.");
+    public String getEspecialidad() {
+        return especialidad;
     }
 }
